@@ -1,0 +1,22 @@
+version: '3'
+
+services:
+  reverse-proxy:
+    image: nginx:1.15
+    volumes:
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
+    ports:
+      - 8080:80
+    depends_on:
+      - frontend
+      - backend
+
+  frontend:
+    image: brunsjrl/trustmodel-frontend:0.1.0-SNAPSHOT
+    expose:
+      - 80
+
+  backend:
+    image: brunsjrl/trustmodel-backend:0.0.1-SNAPSHOT
+    expose:
+      - 8080
