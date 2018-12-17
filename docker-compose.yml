@@ -8,15 +8,15 @@ services:
     ports:
       - 8080:80
     depends_on:
-      - frontend
+      - ui
       - backend
 
-  frontend:
-    image: brunsjrl/trustmodel-frontend:0.1.0-SNAPSHOT
+  ui:
+    build: ./netlogo-trustmodel-ui/
     expose:
       - 80
 
   backend:
-    image: brunsjrl/trustmodel-backend:0.0.1-SNAPSHOT
+    build: ./netlogo-trustmodel-backend/
     expose:
       - 8080
