@@ -1,0 +1,6 @@
+[submodule "netlogo-trustmodel-backend"]
+	path = netlogo-trustmodel-backend
+	url = https://github.com/SadiaWaleem/netlogo-trustmodel-backend
+[submodule "netlogo-trustmodel-ui"]
+	path = netlogo-trustmodel-ui
+	url = https://github.com/shengwu1026/netlogo-trustmodel-ui
