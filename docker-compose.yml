@@ -8,15 +8,15 @@ services:
     ports:
       - 8080:80
     depends_on:
-      - ui
+      - frontend
       - backend
 
-  ui:
-    build: ./netlogo-trustmodel-ui/
+  frontend:
+    build: ./netlogo-clawmodel-frontend/
     expose:
       - 80
 
   backend:
-    build: ./netlogo-trustmodel-backend/
+    build: ./netlogo-clawmodel-backend/
     expose:
       - 8080
